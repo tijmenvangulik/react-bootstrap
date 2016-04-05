@@ -6,13 +6,17 @@ or use ES6 imports in typescript 1.8.9 (typescript is only babel-6 compatible no
 
 For now I only have the following commands working 
 
-npm install
-npm build
+    npm install
+    npm build
 
 The above places the new style files in the lib directory
 
 webpack does not yet work so the file in the dist folder is still old. However you can just use the
 files in lib folder in your project an run webpack or a different tool to combine the sources.
+
+ES6 typescript definitions are located in:
+
+    typings/react-bootstrap/react-bootstrap.d.ts
 
 Original Readme
 
