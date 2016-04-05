@@ -1,4 +1,20 @@
-# react-bootstrap
+# react-bootstrap-babel-6
+
+Fork of the react-bootstrap project which compiles the to babel-6 compatible javascript in the 
+lib directory. This is needed when you want to use react-bootstrap in combination with babel-6 libraries
+or use ES6 imports in typescript 1.8.9 (typescript is only babel-6 compatible not babel-5)
+
+For now I only have the following commands working 
+
+npm install
+npm build
+
+The above places the new style files in the lib directory
+
+webpack does not yet work so the file in the dist folder is still old. However you can just use the
+files in lib folder in your project an run webpack or a different tool to combine the sources.
+
+Original Readme
 
 [Bootstrap 3][bootstrap] components built with [React][react].
 
