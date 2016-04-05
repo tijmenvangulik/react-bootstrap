@@ -295,6 +295,9 @@ describe('Navbar', () => {
 
   describe('deprecations', ()=> {
     it('Should add header with brand', () => {
+      shouldWarn('deprecated');
+      shouldWarn('has been renamed');
+
       let instance = ReactTestUtils.renderIntoDocument(
         <Navbar brand="Brand" />
       );
@@ -308,11 +311,11 @@ describe('Navbar', () => {
       assert.ok(brand);
       assert.equal(brand.nodeName, 'SPAN');
       assert.equal(brand.innerText, 'Brand');
-
-      shouldWarn('deprecated');
     });
 
     it('Should add header when toggleNavKey is 0', () => {
+      shouldWarn('deprecated');
+
       let instance = ReactTestUtils.renderIntoDocument(
         <Navbar toggleNavKey={0}>
           <Nav eventKey={0} />
@@ -321,8 +324,6 @@ describe('Navbar', () => {
 
       ReactTestUtils.findRenderedDOMComponentWithClass(instance, 'navbar-header');
       ReactTestUtils.findRenderedDOMComponentWithClass(instance, 'navbar-toggle');
-
-      shouldWarn('deprecated');
     });
   });
 
